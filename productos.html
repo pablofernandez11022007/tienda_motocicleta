@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - SULFER Motocicletas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-motorcycle"></i>
+                    <span>SULFER</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="productos.html" class="active">MOTOCICLETAS</a></li>
+                <li><a href="index.html#modelos">MODELOS</a></li>
+                <li><a href="index.html#servicios">SERVICIOS</a></li>
+                <li><a href="index.html#contacto">CONTACTO</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <a href="login.html" class="btn-login">
+                    <i class="fas fa-user"></i>
+                    <span>INGRESAR</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1>NUESTRAS MOTOCICLETAS</h1>
+            <p>Encuentra tu compañera perfecta de aventuras</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label>
+                        <i class="fas fa-search"></i>
+                        BUSCAR
+                    </label>
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre o modelo...">
+                </div>
+                
+                <div class="filter-group">
+                    <label>
+                        <i class="fas fa-layer-group"></i>
+                        CATEGORÍA
+                    </label>
+                    <select id="categoryFilter">
+                        <option value="">Todas las categorías</option>
+                        <option value="sport">Sport</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="mototaxi">Mototaxi</option>
+                        <option value="electric">Eléctrica</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>
+                        <i class="fas fa-sort"></i>
+                        ORDENAR
+                    </label>
+                    <select id="sortFilter">
+                        <option value="default">Relevancia</option>
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                        <option value="name">Nombre (A-Z)</option>
+                    </select>
+                </div>
+                
+                <button class="btn-clear" onclick="clearFilters()">
+                    <i class="fas fa-redo"></i>
+                    LIMPIAR
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-info">
+                <h2>TODOS LOS MODELOS</h2>
+                <span class="products-count" id="productsCount">6 motocicletas disponibles</span>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan dinámicamente -->
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No se encontraron resultados</h3>
+                <p>Intenta con otros filtros de búsqueda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>SULFER</span>
+                    </div>
+                    <p>Motocicletas de alto rendimiento para los que buscan lo mejor</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>PRODUCTOS</h3>
+                    <ul>
+                        <li><a href="productos.html?cat=sport">Sport</a></li>
+                        <li><a href="productos.html?cat=adventure">Adventure</a></li>
+                        <li><a href="productos.html?cat=mototaxi">Mototaxi</a></li>
+                        <li><a href="productos.html?cat=electric">Eléctrica</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>EMPRESA</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +591 65017227</li>
+                        <li><i class="fas fa-envelope"></i> info@sulfer.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Cruz, Bolivia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SULFER. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>MI CARRITO</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn-checkout" id="btnCheckout">
+                <i class="fab fa-whatsapp"></i>
+                REALIZAR PEDIDO
+            </button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content" id="modalContent">
+            <!-- El contenido se carga dinámicamente -->
+        </div>
+    </div>
+
+    <script src="productos.js"></script>
+</body>
+</html>

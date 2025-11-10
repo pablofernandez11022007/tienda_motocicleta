@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SULFER - Motocicletas de Alto Rendimiento</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>SULFER</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="productos.html">MOTOCICLETAS</a></li>
+                <li><a href="#modelos">MODELOS</a></li>
+                <li><a href="#servicios">SERVICIOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <a href="login.html" class="btn-login">
+                    <i class="fas fa-user"></i>
+                    <span>INGRESAR</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Search Bar -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar motocicletas..." id="searchInput">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="https://cdn.pixabay.com/vimeo/504854194/motorcycle-52207.mp4?width=1280&hash=6e0b8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-label">NUEVA COLECCIÓN 2025</span>
+                    <h1 class="hero-title">DOMINA EL CAMINO</h1>
+                    <p class="hero-subtitle">Experimenta la máxima potencia y rendimiento con nuestras motocicletas de última generación</p>
+                    <div class="hero-buttons">
+                        <a href="productos.html" class="btn-primary">
+                            EXPLORAR MODELOS
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#modelos" class="btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            VER VIDEO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <span>DESLIZA</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="modelos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">DESCUBRE</span>
+                <h2 class="section-title">CATEGORÍAS</h2>
+                <p class="section-subtitle">Encuentra la motocicleta perfecta para tu estilo de conducción</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="sport">
+                    <div class="category-image">
+                        <img src="imagenes/Ninja.jpg" alt="Sport">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>SPORT</h3>
+                        <p>Velocidad y adrenalina pura</p>
+                        <a href="productos.html?cat=sport" class="category-link">
+                            EXPLORAR <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="adventure">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800" alt="Adventure">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <i class="fas fa-mountain"></i>
+                        <h3>ADVENTURE</h3>
+                        <p>Conquista cualquier terreno</p>
+                        <a href="productos.html?cat=adventure" class="category-link">
+                            EXPLORAR <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="Mototaxi">
+                    <div class="category-image">
+                        <img src="imagenes/Mototaxi.jpg" alt="Mototaxi">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <i class="fas fa-road"></i>
+                        <h3>MOTOTAXI</h3>
+                        <p>Ideal para trabajar</p>
+                        <a href="productos.html?cat=mototaxi" class="category-link">
+                            EXPLORAR <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="electric">
+                    <div class="category-image">
+                        <img src="imagenes/Eléctrica.png" alt="Eléctrica">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <i class="fas fa-bolt"></i>
+                        <h3>ELÉCTRICA</h3>
+                        <p>El futuro es ahora</p>
+                        <a href="productos.html?cat=electric" class="category-link">
+                            EXPLORAR <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">LO MEJOR</span>
+                <h2 class="section-title">MODELOS DESTACADOS</h2>
+                <p class="section-subtitle">Las motocicletas más populares de nuestra colección</p>
+            </div>
+            
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Los productos se cargarán dinámicamente -->
+            </div>
+            
+            <div class="featured-cta">
+                <a href="productos.html" class="btn-primary">
+                    VER TODOS LOS MODELOS
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="servicios">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>GARANTÍA EXTENDIDA</h3>
+                    <p>3 años de garantía completa en todas nuestras motocicletas</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>ENVÍO NACIONAL</h3>
+                    <p>Entregamos tu moto en cualquier parte del país</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>SERVICIO TÉCNICO</h3>
+                    <p>Mantenimiento y reparación especializada</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>FINANCIAMIENTO</h3>
+                    <p>Planes de pago flexibles adaptados a ti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="experience-content">
+            <div class="experience-text">
+                <span class="section-tag">SULFER EXPERIENCE</span>
+                <h2>MÁS QUE UNA MOTOCICLETA</h2>
+                <p>En SULFER no solo vendemos motocicletas, creamos experiencias. Cada modelo está diseñado para ofrecer el máximo rendimiento, seguridad y estilo.</p>
+                <ul class="experience-list">
+                    <li><i class="fas fa-check"></i> Tecnología de punta</li>
+                    <li><i class="fas fa-check"></i> Diseño innovador</li>
+                    <li><i class="fas fa-check"></i> Máxima seguridad</li>
+                    <li><i class="fas fa-check"></i> Rendimiento superior</li>
+                </ul>
+                <a href="productos.html" class="btn-primary">
+                    DESCUBRE MÁS
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="experience-image">
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=1200" alt="Experiencia SULFER">
+                <div class="experience-badge">
+                    <span class="badge-number">15+</span>
+                    <span class="badge-text">Años de experiencia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">CONTACTO</span>
+                    <h2>¿LISTO PARA TU NUEVA MOTO?</h2>
+                    <p>Nuestro equipo está listo para ayudarte a encontrar la motocicleta perfecta</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+591 65017227</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>infodata@sulfer.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Santa Cruz, Bolivia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            ENVIAR MENSAJE
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>SULFER</span>
+                    </div>
+                    <p>Motocicletas de alto rendimiento para los que buscan lo mejor</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>PRODUCTOS</h3>
+                    <ul>
+                        <li><a href="productos.html?cat=sport">Sport</a></li>
+                        <li><a href="productos.html?cat=adventure">Adventure</a></li>
+                        <li><a href="productos.html?cat=mototaxi">Mototaxi</a></li>
+                        <li><a href="productos.html?cat=electric">Eléctrica</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>EMPRESA</h3>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>NEWSLETTER</h3>
+                    <p>Recibe las últimas novedades y ofertas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SULFER. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>MI CARRITO</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn-checkout" id="btnCheckout">
+                <i class="fab fa-whatsapp"></i>
+                REALIZAR PEDIDO
+            </button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
